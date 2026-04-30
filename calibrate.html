@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reserve Map Coordinate Calibrator</title>
-    <script src="https://d3js.org/d3.v7.min.js"></script>
     <style>
         :root {
             --bg: #0f172a;
@@ -168,24 +167,6 @@
             cursor: crosshair;
         }
 
-        .overlay svg {
-            width: 100%;
-            height: 100%;
-            display: block;
-        }
-
-        .overlay .cells path {
-            fill: rgba(56, 189, 248, 0.08);
-            stroke: rgba(125, 211, 252, 0.45);
-            stroke-width: 1;
-        }
-
-        .overlay .cells path.active {
-            fill: rgba(245, 158, 11, 0.16);
-            stroke: rgba(251, 191, 36, 0.95);
-            stroke-width: 2;
-        }
-
         .marker {
             position: absolute;
             width: 14px;
@@ -320,9 +301,7 @@
         <main class="map-panel">
             <div class="map-frame" id="mapFrame">
                 <img id="mapImage" src="reserve-map.jpg" alt="Reserve map for coordinate calibration">
-                <div class="overlay" id="mapOverlay">
-                    <svg id="overlaySvg" aria-hidden="true"></svg>
-                </div>
+                <div class="overlay" id="mapOverlay"></div>
             </div>
         </main>
     </div>
